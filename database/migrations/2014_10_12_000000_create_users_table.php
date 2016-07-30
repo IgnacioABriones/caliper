@@ -16,11 +16,14 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('name');
 <<<<<<< HEAD
+<<<<<<< HEAD
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->rememberToken();
             $table->timestamps();
 =======
+=======
+>>>>>>> c1850966f1bb5da9cfffe3f7e8c8213277b5b3d9
             $table->string('identifier');
             $table->string('annexed');
             $table->string('photo_url');
@@ -34,6 +37,9 @@ class CreateUsersTable extends Migration
                 ->references('id')
                 ->on('cities')
                 ->onDelete('cascade');
+<<<<<<< HEAD
+>>>>>>> c1850966f1bb5da9cfffe3f7e8c8213277b5b3d9
+=======
 >>>>>>> c1850966f1bb5da9cfffe3f7e8c8213277b5b3d9
         });
     }
@@ -46,7 +52,11 @@ class CreateUsersTable extends Migration
     public function down()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         Schema::drop('users');
+=======
+        Schema::dropIfExists('users');
+>>>>>>> c1850966f1bb5da9cfffe3f7e8c8213277b5b3d9
 =======
         Schema::dropIfExists('users');
 >>>>>>> c1850966f1bb5da9cfffe3f7e8c8213277b5b3d9
